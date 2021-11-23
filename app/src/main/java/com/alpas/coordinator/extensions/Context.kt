@@ -8,7 +8,6 @@ fun Context.dpToPx(dp: Int): Float {
         TypedValue.COMPLEX_UNIT_DIP,
         dp.toFloat(),
         this.resources.displayMetrics
-
     )
 }
 

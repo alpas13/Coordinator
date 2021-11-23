@@ -5,10 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/color_primary"
+            app:expandedTitleGravity="bottom"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/iv_product"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/photo"
+                android:contentDescription="TODO" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Iceland"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <TextView
             android:layout_width="wrap_content"
@@ -18,11 +53,54 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    <com.alpas.coordinator.ui.custom.CustomFab
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="@android:color/white"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|center"
+        android:src="@drawable/ic_add_black_24dp"
+        android:contentDescription="TODO" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_behavior=".ui.custom.behaviors.HideFabBehavior"
+        android:id="@+id/mini1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        app:layout_anchor="@id/fab"
+        app:layout_anchorGravity="center"
+        android:src="@drawable/ic_flight_takeoff_black_24dp"
+        android:contentDescription="TODO" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_behavior=".ui.custom.behaviors.HideFabBehavior"
+        android:id="@+id/mini2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        app:layout_anchor="@id/fab"
+        app:layout_anchorGravity="center"
+        android:src="@drawable/ic_payment_black_24dp"
+        android:contentDescription="TODO" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_behavior=".ui.custom.behaviors.HideFabBehavior"
+        android:id="@+id/mini3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        app:layout_anchor="@id/fab"
+        app:layout_anchorGravity="center"
+        android:src="@drawable/ic_loyalty_black_24dp"
+        android:contentDescription="TODO" />
+
     <com.alpas.coordinator.ui.custom.ArticleSubmenu
         android:id="@+id/submenu"
         android:layout_width="200dp"
         android:layout_height="96dp"
-        android:layout_gravity="bottom|right"
+        android:layout_gravity="bottom|end"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:elevation="8dp"
