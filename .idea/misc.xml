@@ -4,8 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ripple.xml" value="0.21875" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/layout_bottombar.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/layout_bottombar.xml" value="0.335" />
         <entry key="app/src/main/res/layout/layout_submenu.xml" value="0.15942028985507245" />
       </map>
     </option>
